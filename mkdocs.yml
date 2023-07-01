@@ -1,3 +1,21 @@
-site_name: My Docs
+site_name: Compose UI Architecture
 theme:
   name: material
+  logo: assets/icon.svg
+  palette: 
+    scheme: default
+    primary: white
+    accent: green
+  font:
+    text: "Roboto"
+    code: "JetBrains Mono"
+  features:
+    - navigation.tabs
+
+nav:
+  - "Home": index.md
+  - state.md
+  - screen.md
+  - actions.md
+  - coordinator.md  
+  

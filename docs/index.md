@@ -1,17 +1,21 @@
-# Welcome to MkDocs
+![logo](assets/header.jpg)
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+# Overview
+This repository serves as the opinionated knowledge hub that contains component descriptions best practices and tools for  developing complex UI features using Compose
 
-## Commands
+## Resources
+The list of resources associated with Compose UI Architecture
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+### Articles
 
-## Project layout
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+### Tools
+
+**Jetpack Compose UI Archicture Templates IDE Plugin**
+
+Android studio plugin that facilitates creating new Jetpack Compose powered UI screens for android. 
+
+- Provides a set of templates that can be used to create a set components described here 
+- Provides a set of Live Templates that can to write Compose UI code faster
+
+<iframe width="245px" height="48px" src="https://plugins.jetbrains.com/embeddable/install/19034"></iframe>
