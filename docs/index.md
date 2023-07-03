@@ -15,11 +15,11 @@ These pages are still work in progress and might contain spelling errors, incons
 ## Overview 
 Featured approach has following components
 
-- State - The static state of our Screen
-- Actions - Set of **user** interactions available on the screen
-- Screen - Stateless representation of our feature UI, consumes state and emits Actions
-- Coordinator - Provides the state and consumes Actions. Coordinates different state providers and action handlers to fulfill user journey
-- Route - Main entry point to our Screen. Remember the coordinator and actions. Collects the state
+- **State** - The static state of our Screen
+- **Actions** - Set of **user** interactions available on the screen
+- **Screen** - Stateless representation of our feature UI, consumes state and emits Actions
+- **Coordinator** - Provides the state and consumes Actions. Coordinates different state providers and action handlers to fulfill user journey
+- **Route** - Main entry point to our Screen. Remember the coordinator and actions. Collects the state
 
 ![](assets/data_flow.svg)
 

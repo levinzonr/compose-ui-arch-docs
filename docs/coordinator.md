@@ -15,7 +15,6 @@ The most common example of the State Provide can be the android `ViewModel` that
 
 
 ```kotlin
-
 data class ViewModelState(
     val items: List<Item>
 )
@@ -39,7 +38,7 @@ class ExampleCoordinator(
 
 **The Action Handlers** is something that can mutate our State. Very often the Action Handler can also act as the State Provider. 
 
-In summary, the main idea of the Coordinator is to "coordinate" different State Providers and Action Handlers to perform some Action
+In summary, the main idea of the Coordinator is to "coordinate" different State Providers and Action Handlers to perform some user journey
 
 
 ```kotlin
@@ -57,14 +56,36 @@ fun focusOnUserLocation() {
 }
 ```
 
+Following diagram demonstrates this in a more generic way
+
 ![](/docs/assets/coordinator_statehoisting.svg)
 
 
 ## React to State Changes - Side effects
-Because of the Reactive nature of Compose handling something that we consider one shot events is a bit tricky. 
+Because of the Reactive nature of Compose handling something that we consider one shot events can be bit tricky. 
 
 When inside `@Composable` we have access to different effects so we can do something only when certain conditions are met without worrying about re-compositions. 
 
-But since we have `Coordinator` we can let it do that for us as well. Since the `Coordinator` is outside of @Composable scope and doesn't get re-created because of the recompositions we can easily subscribe to the state changes and react to them.
+But since we have `Coordinator` we can let it do that for us as well. Because the `Coordinator` is outside of Composable scope and doesn't get re-created due to the recompositions we can easily subscribe to the state changes and react to them in more straight forward fasion, just like we would normally do in our `ViewModel`
+
+
+```kotlin
+class Coordinator(
+    val viewModel: ViewModel,
+    val context: Context,
+    val scope: CoroutineScope
+) {
+    init {
+        viewModel.errorFlow()
+            .onEach { msg -> 
+                context.showToast(msg) 
+                viewModel.dismissError()
+            }
+            .launchIn(scope)
+    }
+}
+```
+
+Again this is basically the same thing we would with the Action coming in from the `Screen`, except now the source of this interaction is the **State Provider** it self and it doesn't leave the `Coordinator` and goes directly to the **Action Handlers**
 
 ![](assets/coordinator_sideeffects.svg)
