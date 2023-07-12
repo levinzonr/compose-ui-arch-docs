@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Coordinator
 The coordinator the is the main component in our architecture. Every statefull Composable component, such as `LazyRow` and `Scaffold` has a state that drives how the component works, similiary, you can think of a Coordinator as the state of your flow or feature.
 

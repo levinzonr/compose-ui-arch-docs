@@ -1,3 +1,8 @@
+---
+comments: true
+---
+
+
 # State
 The state is the bread and butter of Compose. This page describes the role of State in our architecture, different types of states and should and should not be a part of it
 

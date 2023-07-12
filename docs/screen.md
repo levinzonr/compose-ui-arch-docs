@@ -1,3 +1,8 @@
+---
+comments: true
+---
+
+
 # Screen
 The `Screen` is the visual representation of the feature that we are working on. It is  component that renders our UI based on the given `State` and emits `Actions` for our `Coordinator` to handle. Here are a few rules we would like our `Screen` to flow.
 

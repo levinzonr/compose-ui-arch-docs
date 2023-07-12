@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Actions
 The `Actions` represen the User Interactions that are happening in our `Screen` and being handled by `Coordinator`. Not every interaction though should be considered an *Action*.
 
