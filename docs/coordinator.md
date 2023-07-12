@@ -58,7 +58,7 @@ fun focusOnUserLocation() {
 
 Following diagram demonstrates this in a more generic way
 
-![](/docs/assets/coordinator_statehoisting.svg)
+![](./assets/coordinator_statehoisting.svg)
 
 
 ## React to State Changes - Side effects

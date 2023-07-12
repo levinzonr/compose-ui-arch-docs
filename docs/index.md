@@ -1,16 +1,9 @@
 ![logo](assets/header.jpg)
 
-
-
-
 This repository serves as the opinionated knowledge hub that contains component descriptions best practices and tools for  developing complex UI features using Compose
-
-
 
 ##  🚧 Work in Progress ##
 These pages are still work in progress and might contain spelling errors, inconsistencies and unfinished pages. 
-
-
 
 ## Overview 
 Featured approach has following components
@@ -22,7 +15,6 @@ Featured approach has following components
 - **Route** - Main entry point to our Screen. Remember the coordinator and actions. Collects the state
 
 ![](assets/data_flow.svg)
-
 
 
 ## Resources
