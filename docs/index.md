@@ -21,8 +21,8 @@ Featured approach has following components
 The list of resources associated with Compose UI Architecture
 
 ### Articles
-
-
+- [Jetpack Compose UI Architecture](https://engineering.monstar-lab.com/en/post/2023/07/14/Jetpack-Compose-UI-Architecture/) - Monstarlab Engeneering Blog Article that would be a great introduction into the core concepts and its usage.
+  
 ### Tools
 
 **Jetpack Compose UI Archicture Templates IDE Plugin**
