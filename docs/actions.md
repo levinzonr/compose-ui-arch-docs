@@ -51,4 +51,23 @@ fun LoginScreen(val actions: LoginActions) {
 ## Actions drive the change in application state
 This rule eliminates User Interactions that don't influence our Application State. The `Action` intention is to change our Application State, for example by changing the `State` of our `ViewModel`, navigate to another `Route`, things like that.
 
-This really depends on the requirements you have for your `Screen` and what do you consider a `State` 
+This really depends on the requirements you have for your `Screen` and what do you consider a `State`. For instance, lets say we have a component inside our screen that has a drop-down element.
+
+```kotlin
+fun SomeComponent(isRevealed: Boolean) {
+    Column {
+        Row {
+            Text("Click to reveal")
+            DropdownButton()
+        }
+    }
+    if (isRevealed) {
+        Text("More info")
+    }
+}
+```
+
+Lets say the `isRevealed` flag is not part of the Screen state, but rather an internal state of our component. In this case there is no point to expose the onClick action of our Dropdown button since we can this small component handle its own state
+
+
+Some components are better left handling its own state as long as it the only state it manages and no-one esle has access to it, so that we stll has one source of truth.

@@ -103,3 +103,4 @@ class Coordinator(val pagerState: PagerState, scope: CoroutineScope) {
             .launchIn(scope)
     }
 }
+```
